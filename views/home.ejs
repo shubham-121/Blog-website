@@ -1,0 +1,27 @@
+
+<%- include('partials/header'); -%>
+<h1 style="font-size: 30px;">Home. Welcome!</h1>
+
+
+<p style="font-size: 15px;"><%= startingContent %></p>
+
+<p style="font-size: 15px;">This Blog Website is created by me. You can post your daily content here as you like.</p>
+
+<% console.log(posts);  %>
+
+<% posts.forEach(function(post){  %>
+<!-- <%   console.log(post.title);     %> -->
+
+<h2><%= post.title %><h2>
+<p style="font-size: 18px;"> <%= post.content.substring(0,50) + "............"  %></p>
+
+<a style="font-size: 15px;" href="/posts/<%= post.title %>">Read More</a>
+
+<%  });  %>
+
+
+
+<%- include('partials/footer'); -%>
+
+
+
